@@ -1,0 +1,42 @@
+{
+    "name": "frisc",
+    "displayName": "FRISC",
+    "description": "FRISC syntax highlighting extension",
+    "version": "1.0.0",
+    "publisher": "lukamac",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "frisc",
+            "aliases": ["FRISC assembly", "frisc"],
+            "extensions": [".a",".frisc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "frisc",
+            "scopeName": "source.frisc",
+            "path": "./syntaxes/frisc.tmLanguage.json"
+        }],
+        "configurationDefaults": {
+            "[frisc]": {
+                "files.insertFinalNewline": true,
+                "files.eol": "\n"
+            }
+        }
+    },
+    "license": "See license in LICENSE file",
+    "bugs": {
+        "url": "https://github.com/lukamac/vscode-frisc/issues",
+        "email": "luka.macan@fer.hr"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lukamac/vscode-frisc.git"
+    },
+    "homepage": "https://github.com/lukamac/vscode-frisc"
+}

@@ -1,0 +1,100 @@
+{
+	"name": "FRISC assembly",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#labels"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "variable.other.local",
+					"match": "\\bR[0-7]\\b"
+				},
+				{
+					"name": "variable.language.registers.stack-pointer",
+					"match": "\\bSP\\b"
+				},
+				{
+					"name": "variable.language.registers.status-register",
+					"match": "\\bSR\\b"
+				},
+				{
+					"name": "keyword.operator",
+					"match": "(JR|JP|CALL|RET|RETI|RETN)"
+                },
+                {
+                    "name": "keyword.control",
+                    "match": "_(Z|NZ|EQ|NE|C|NC|M|P|N|NN|ULT|ULE|UGT|UGE|SLT|SLE|SGT|SGE)"
+                },
+                {
+                    "name": "keyword.operator",
+                    "match": "\\bMOVE\\b"
+                },
+				{
+					"name": "keyword.operator.memory-operation",
+					"match": "\\b(POP|PUSH|LOAD[BH]?|STORE[BH]?)\\b"
+				},
+				{
+					"name": "keyword.operator",
+					"match": "\\b(ADD|ADDC|SUB|AND|OR|XOR|SHL|SHR|ASHR|ROTL|ROTR|CMP)\\b"
+				}
+			]
+		},
+		"labels": {
+			"patterns": [
+				{
+					"name": "entity.name.function.preprocessor",
+					"match": "\\w+"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.dec",
+					"match": "%D -?[0-9]+"
+				},
+				{
+					"name": "constant.numeric.bin",
+					"match": "%B -?[01]+"
+                },
+                {
+                    "name": "constant.numeric.hex",
+                    "match": "%H -?[0-9a-fA-F]+"
+                },
+				{
+					"name": "constant.numeric.hex",
+					"match": "-?[0-9][0-9a-fA-F]*"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": ";.*"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.frisc",
+			"begin": "\"",
+			"end": "\""
+		}
+	},
+	"scopeName": "source.frisc"
+}
