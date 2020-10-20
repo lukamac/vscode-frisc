@@ -17,9 +17,14 @@ The Atlas simulator requires that all FRISC assembly files use LF for newline an
 
 This extension provides default configurations that satisfy that and are used only when programming with a FRISC assembly file.
 
-## Release Notes
+## Install
 
-Users appreciate release notes as you update your extension.
+Download .vsix file from the _Releases_ tab and run the command:
+```
+$ code --install-extension frisc-<version>.vsix
+```
+
+## Release Notes
 
 ### 1.0.0
 
