@@ -38,7 +38,7 @@
                 },
                 {
                     "name": "keyword.control",
-                    "match": "_(Z|NZ|EQ|NE|C|NC|M|P|N|NN|ULT|ULE|UGT|UGE|SLT|SLE|SGT|SGE)"
+                    "match": "_(Z|NZ|EQ|NE|C|NC|M|P|NN?|ULT|ULE|UGT|UGE|SLT|SLE|SGT|SGE)"
                 },
                 {
                     "name": "keyword.operator",
